@@ -135,6 +135,10 @@
       const dy = y - centerY;
       const distance = Math.round(Math.sqrt(dx*dx + dy*dy));
 
+      if (distance < 3) {
+       resultBox.textContent = "정확히 맞춤!";
+       return;
+     }
     
       const dot = document.createElement("div");
       dot.classList.add("dot");
@@ -150,3 +154,4 @@
 
 </body>
 </html>
+
